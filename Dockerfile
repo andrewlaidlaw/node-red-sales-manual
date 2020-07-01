@@ -25,8 +25,8 @@ RUN python3 -m venv /usr/src/node-red/venv --system-site-packages
 #install Watson service nodes and dashdb clinet for Db2
 RUN npm install -g --unsafe-perm node-red-nodes-cf-sqldb-dashdb
 
-#COPY sales_manual_finder.py /usr/src/node-red/sales_manual_finder.py
-#COPY sales_manual_product_lifecycle_extractor.py /usr/src/node-red/sales_manual_product_lifecycle_extractor.py
+COPY List_Bond_Films.py /usr/src/node-red/List_Bond_Films.py
+COPY List_Bond_Girls.py /usr/src/node-red/List_Bond_Girls.py
 COPY bond-film-flow.json /usr/src/node-red/bond-film-flow.json
 
 RUN chmod 750 /usr/src/node-red/bond-film-flow.json
