@@ -1,15 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
-
-
-
-# In[199]:
-
-
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import fileinput
@@ -38,22 +29,3 @@ for Actress in range(Actress_Count):
         Actresses_List.append(Result)    
     
 print(Actresses_List)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
