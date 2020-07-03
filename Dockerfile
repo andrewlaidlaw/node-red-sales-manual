@@ -18,9 +18,6 @@ RUN apt-get install -y numactl gnupg2 wget locales
 # Ensure that we always use UTF-8 and with GB English locale, as the Python scripts had coding issues
 RUN locale-gen en_GB.UTF-8
 
-COPY ./default_locale /etc/default/locale
-RUN chmod 0755 /etc/default/locale
-
 ENV LC_ALL=en_GB.UTF-8
 ENV LANG=en_GB.UTF-8
 ENV LANGUAGE=en_GB.UTF-8
