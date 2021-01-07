@@ -10,6 +10,11 @@ To run correctly, you will need to pass in the appropriate credentials as Enviro
 - ASSISTANT_ENDPOINT
 - ASSISTANT_WORKSPACE_ID
 
+## Endpoints
+*/bot* - The primary endpoint for a user of the chatbot, allowing them to interact with the service
+*/botchat* - The endpoint for values to be passed to the chatbot, not for general access
+*/healthz* - An endpoint to enable healthchecks and get confirmation of a running pod
+
 ---
 Based on the original container image by by Stuart Cunliffe:
 ### node-red-python
