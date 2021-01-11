@@ -7,7 +7,7 @@ if url == "Missing":
     print("Missing")
 else:
     html = urlopen(url)
-    soup = BeautifulSoup(html, 'html')
+    soup = BeautifulSoup(html, 'html.parser')
 # soup.contents
     Product_Life_Cycle_Title = soup.find("a", string="Product life cycle dates")
     Product_Life_Cycle_Table = Product_Life_Cycle_Title.find_next("table")

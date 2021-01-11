@@ -13,7 +13,7 @@ Search_url += MTM
 Search_url += "&MPPEFFDR=&MPPEFTDR=&MPPEFSRT=2&hitsperpage=20&resultpage=1"
 
 html = urlopen(Search_url)
-soup = BeautifulSoup(html, 'html')
+soup = BeautifulSoup(html, 'html.parser')
 # soup.content
 json_string = soup.text
 parsed_json = json.loads(json_string)
