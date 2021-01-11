@@ -1,5 +1,3 @@
 gunicorn
 Flask
-urllib
-json
 bs4
