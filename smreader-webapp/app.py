@@ -2,7 +2,6 @@ from flask import Flask, request
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import json
-# import sys
 
 app = Flask(__name__)
 
@@ -40,6 +39,7 @@ def index():
     return json.dumps(content)
 
 @app.route('/healthz')
+# Added healthcheck endpoint
 def healthz():
     return "ok"
 

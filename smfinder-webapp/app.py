@@ -2,7 +2,6 @@ from flask import Flask, request
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import json
-# import sys
 
 app = Flask(__name__)
 
@@ -16,7 +15,7 @@ def index():
 
         html = urlopen(Search_url)
         soup = BeautifulSoup(html, 'html.parser')
-        # soup.content
+
         json_string = soup.text
         parsed_json = json.loads(json_string)
         results = parsed_json['totalhitscount']
@@ -32,6 +31,7 @@ def index():
     return response
 
 @app.route('/healthz')
+# Added healthcheck endpoint
 def healthz():
     return "ok"
 
