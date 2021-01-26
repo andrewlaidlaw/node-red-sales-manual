@@ -1,5 +1,5 @@
 # Use existing Node Red container
-FROM rhscl/nodejs-14-rhel7
+FROM registry.redhat.io/rhscl/nodejs-14-rhel7
 LABEL maintainer="Andrew Laidlaw [andrew.laidlaw@uk.ibm.com]"
 
 # Copy source files into the container
