@@ -14,7 +14,7 @@ EXPOSE 1880/tcp
 ENV http_proxy http://9.196.148.19:3128
 ENV https_proxy http://9.196.148.19:3128
 
-RUN apt-get update && apt-get install nodejs
+RUN apt-get update && apt-get install nodejs -y
 
 # Set user and required environmetn variables
 #USER nodered
