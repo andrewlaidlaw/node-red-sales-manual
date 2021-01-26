@@ -1,5 +1,5 @@
 # Use existing Node Red container
-FROM rhel/rhel7
+FROM ubi7/nodejs-8
 LABEL maintainer="Andrew Laidlaw [andrew.laidlaw@uk.ibm.com]"
 
 # Copy source files into the container
