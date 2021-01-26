@@ -22,4 +22,4 @@ ENV HOME /usr/src/node-red
 #WORKDIR /usr/src/node-red
 
 # Run Node Red including our predefined flows
-CMD node-red /usr/src/node-red/sales-manual-reader-flow.json
+CMD [ "node --max-old-space-size=384 node_modules/node-red/red.js sales-manual-reader-flow.json --port 8080"]
