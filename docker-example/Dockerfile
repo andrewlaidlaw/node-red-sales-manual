@@ -11,8 +11,8 @@ COPY package.json /usr/src/node-red/package.json
 EXPOSE 1880/tcp
 
 # Proxy settings only needed for our local environment, could be passed at build
-ENV http_proxy http://9.196.148.19:3128
-ENV https_proxy http://9.196.148.19:3128
+#ENV http_proxy http://9.196.148.19:3128
+#ENV https_proxy http://9.196.148.19:3128
 
 RUN apt-get update && apt-get install nodejs -y
 
