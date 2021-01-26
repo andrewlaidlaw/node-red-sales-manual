@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install nodejs -y
 # Set user and required environmetn variables
 #USER nodered
 ENV HOME /usr/src/node-red
-#WORKDIR /usr/src/node-red
+WORKDIR /usr/src/node-red
 
 # Run Node Red including our predefined flows
 CMD [ "node --max-old-space-size=384 node_modules/node-red/red.js sales-manual-reader-flow.json --port 8080"]
