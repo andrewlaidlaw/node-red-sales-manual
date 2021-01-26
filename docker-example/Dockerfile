@@ -1,13 +1,16 @@
 # Use existing Node Red container
-FROM registry.redhat.io/rhscl/nodejs-14-rhel7
+#FROM registry.redhat.io/rhscl/nodejs-14-rhel7
+FROM docker.io/ubuntu:xenial
 LABEL maintainer="Andrew Laidlaw [andrew.laidlaw@uk.ibm.com]"
 
 # Copy source files into the container
-COPY sales-manual-reader-flow.json /usr/src/node-red/sales-manual-reader-flow.json
-COPY package.json /usr/src/node-red/package.json
+COPY ../sales-manual-reader-flow.json /usr/src/node-red/sales-manual-reader-flow.json
+COPY ../package.json /usr/src/node-red/package.json
 
 # Expose default Node Red port
 EXPOSE 1880/tcp
+
+RUN apt-get update && apt-get install nodejs
 
 # Proxy settings only needed for our local environment, could be passed at build
 #ENV http_proxy http://9.196.156.29:3128
